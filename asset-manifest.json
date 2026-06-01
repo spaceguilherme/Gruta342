@@ -1,15 +1,18 @@
 {
   "files": {
     "main.css": "/Gruta342/static/css/main.46c932db.css",
-    "main.js": "/Gruta342/static/js/main.923ae4ca.js",
+    "main.js": "/Gruta342/static/js/main.f5050688.js",
     "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
+    "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
+    "static/media/mentiras.png": "/Gruta342/static/media/mentiras.e9a9b1c6992520cc8124.png",
+    "static/media/mafia.png": "/Gruta342/static/media/mafia.af8f43879d659563f445.png",
     "static/media/logo.png": "/Gruta342/static/media/logo.de6028c275a174721751.png",
     "index.html": "/Gruta342/index.html",
     "main.46c932db.css.map": "/Gruta342/static/css/main.46c932db.css.map",
-    "main.923ae4ca.js.map": "/Gruta342/static/js/main.923ae4ca.js.map"
+    "main.f5050688.js.map": "/Gruta342/static/js/main.f5050688.js.map"
   },
   "entrypoints": [
     "static/css/main.46c932db.css",
-    "static/js/main.923ae4ca.js"
+    "static/js/main.f5050688.js"
   ]
 }
