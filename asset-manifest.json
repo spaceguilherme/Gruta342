@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Gruta342/static/css/main.275a55b8.css",
+    "main.js": "/Gruta342/static/js/main.c07a3cd2.js",
+    "index.html": "/Gruta342/index.html",
+    "main.275a55b8.css.map": "/Gruta342/static/css/main.275a55b8.css.map",
+    "main.c07a3cd2.js.map": "/Gruta342/static/js/main.c07a3cd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.275a55b8.css",
+    "static/js/main.c07a3cd2.js"
+  ]
+}
