@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/Gruta342/static/css/main.46c932db.css",
-    "main.js": "/Gruta342/static/js/main.f5050688.js",
+    "main.css": "/Gruta342/static/css/main.f015ca3d.css",
+    "main.js": "/Gruta342/static/js/main.d7594492.js",
     "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
+    "static/media/deception.png": "/Gruta342/static/media/deception.caeb469cdf5a85b7c4a3.png",
     "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
     "static/media/mentiras.png": "/Gruta342/static/media/mentiras.e9a9b1c6992520cc8124.png",
     "static/media/mafia.png": "/Gruta342/static/media/mafia.af8f43879d659563f445.png",
+    "static/media/dbd.png": "/Gruta342/static/media/dbd.557adb5a2cb2b2013d76.png",
+    "static/media/joao.png": "/Gruta342/static/media/joao.42ff21dec645c600806f.png",
     "static/media/logo.png": "/Gruta342/static/media/logo.de6028c275a174721751.png",
     "index.html": "/Gruta342/index.html",
-    "main.46c932db.css.map": "/Gruta342/static/css/main.46c932db.css.map",
-    "main.f5050688.js.map": "/Gruta342/static/js/main.f5050688.js.map"
+    "main.f015ca3d.css.map": "/Gruta342/static/css/main.f015ca3d.css.map",
+    "main.d7594492.js.map": "/Gruta342/static/js/main.d7594492.js.map"
   },
   "entrypoints": [
-    "static/css/main.46c932db.css",
-    "static/js/main.f5050688.js"
+    "static/css/main.f015ca3d.css",
+    "static/js/main.d7594492.js"
   ]
 }
