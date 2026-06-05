@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/Gruta342/static/css/main.53fbe84a.css",
-    "main.js": "/Gruta342/static/js/main.6e26df3f.js",
+    "main.css": "/Gruta342/static/css/main.7d123e20.css",
+    "main.js": "/Gruta342/static/js/main.afa0ce5f.js",
     "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
     "static/media/deception.png": "/Gruta342/static/media/deception.caeb469cdf5a85b7c4a3.png",
     "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
     "static/media/mentiras.png": "/Gruta342/static/media/mentiras.e9a9b1c6992520cc8124.png",
     "static/media/mafia.png": "/Gruta342/static/media/mafia.af8f43879d659563f445.png",
     "static/media/landscape.png": "/Gruta342/static/media/landscape.c72feb92cb7d4592ecfe.png",
+    "static/media/card-Elmi.jpeg": "/Gruta342/static/media/card-Elmi.8e11c3c90811197e1c31.jpeg",
+    "static/media/card-Jamilly.jpeg": "/Gruta342/static/media/card-Jamilly.f9b0e8fdf7eaaf28a2d6.jpeg",
+    "static/media/card-Samuel.jpeg": "/Gruta342/static/media/card-Samuel.bfd49f7804d01f92a02c.jpeg",
+    "static/media/card-Guilherme.jpeg": "/Gruta342/static/media/card-Guilherme.319b26a4c0039d389fae.jpeg",
+    "static/media/card-Noronha.jpeg": "/Gruta342/static/media/card-Noronha.a6f5e635b3ce062ba79c.jpeg",
     "static/media/dbd.png": "/Gruta342/static/media/dbd.557adb5a2cb2b2013d76.png",
     "static/media/scape-mob.jpg": "/Gruta342/static/media/scape-mob.79139f11b604b2475fde.jpg",
     "static/media/joao.png": "/Gruta342/static/media/joao.42ff21dec645c600806f.png",
+    "static/media/card-Yasmin.jpeg": "/Gruta342/static/media/card-Yasmin.f6980915c0b28e838ec7.jpeg",
     "static/media/logo.png": "/Gruta342/static/media/logo.de6028c275a174721751.png",
+    "static/media/about.png": "/Gruta342/static/media/about.d68eb96d048d6c14eb9d.png",
     "index.html": "/Gruta342/index.html",
-    "main.53fbe84a.css.map": "/Gruta342/static/css/main.53fbe84a.css.map",
-    "main.6e26df3f.js.map": "/Gruta342/static/js/main.6e26df3f.js.map"
+    "main.7d123e20.css.map": "/Gruta342/static/css/main.7d123e20.css.map",
+    "main.afa0ce5f.js.map": "/Gruta342/static/js/main.afa0ce5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.53fbe84a.css",
-    "static/js/main.6e26df3f.js"
+    "static/css/main.7d123e20.css",
+    "static/js/main.afa0ce5f.js"
   ]
 }
