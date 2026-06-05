@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/Gruta342/static/css/main.e68e53c5.css",
-    "main.js": "/Gruta342/static/js/main.d19278ee.js",
-    "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
+    "main.css": "/Gruta342/static/css/main.73583406.css",
+    "main.js": "/Gruta342/static/js/main.4f0e8f93.js",
+    "static/media/copa2.jpg": "/Gruta342/static/media/copa2.45f5433264acf39d03c3.jpg",
+    "static/media/copa.jpg": "/Gruta342/static/media/copa.d5bb452f95f23cc4239c.jpg",
+    "static/media/mafia.jpg": "/Gruta342/static/media/mafia.ab0de6657b4363c73332.jpg",
     "static/media/deception.png": "/Gruta342/static/media/deception.caeb469cdf5a85b7c4a3.png",
     "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
     "static/media/mentiras.png": "/Gruta342/static/media/mentiras.e9a9b1c6992520cc8124.png",
@@ -11,20 +13,22 @@
     "static/media/card-Elmi.jpeg": "/Gruta342/static/media/card-Elmi.8e11c3c90811197e1c31.jpeg",
     "static/media/card-Jamilly.jpeg": "/Gruta342/static/media/card-Jamilly.f9b0e8fdf7eaaf28a2d6.jpeg",
     "static/media/card-Samuel.jpeg": "/Gruta342/static/media/card-Samuel.bfd49f7804d01f92a02c.jpeg",
+    "static/media/copa2-mob.jpg": "/Gruta342/static/media/copa2-mob.f2e486389f4558009d20.jpg",
+    "static/media/copa-mob.jpg": "/Gruta342/static/media/copa-mob.39c77431fab839fb9c6b.jpg",
     "static/media/card-Guilherme.jpeg": "/Gruta342/static/media/card-Guilherme.319b26a4c0039d389fae.jpeg",
     "static/media/card-Noronha.jpeg": "/Gruta342/static/media/card-Noronha.a6f5e635b3ce062ba79c.jpeg",
+    "static/media/mafia-mob.jpg": "/Gruta342/static/media/mafia-mob.a181df1d41681aabafaa.jpg",
     "static/media/dbd.png": "/Gruta342/static/media/dbd.557adb5a2cb2b2013d76.png",
-    "static/media/scape-mob.jpg": "/Gruta342/static/media/scape-mob.79139f11b604b2475fde.jpg",
     "static/media/joao.png": "/Gruta342/static/media/joao.42ff21dec645c600806f.png",
     "static/media/card-Yasmin.jpeg": "/Gruta342/static/media/card-Yasmin.f6980915c0b28e838ec7.jpeg",
     "static/media/logo.png": "/Gruta342/static/media/logo.de6028c275a174721751.png",
     "static/media/about.png": "/Gruta342/static/media/about.d68eb96d048d6c14eb9d.png",
     "index.html": "/Gruta342/index.html",
-    "main.e68e53c5.css.map": "/Gruta342/static/css/main.e68e53c5.css.map",
-    "main.d19278ee.js.map": "/Gruta342/static/js/main.d19278ee.js.map"
+    "main.73583406.css.map": "/Gruta342/static/css/main.73583406.css.map",
+    "main.4f0e8f93.js.map": "/Gruta342/static/js/main.4f0e8f93.js.map"
   },
   "entrypoints": [
-    "static/css/main.e68e53c5.css",
-    "static/js/main.d19278ee.js"
+    "static/css/main.73583406.css",
+    "static/js/main.4f0e8f93.js"
   ]
 }
