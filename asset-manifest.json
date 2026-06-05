@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Gruta342/static/css/main.e68e53c5.css",
-    "main.js": "/Gruta342/static/js/main.9b899c68.js",
+    "main.js": "/Gruta342/static/js/main.1a3781bc.js",
     "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
     "static/media/deception.png": "/Gruta342/static/media/deception.caeb469cdf5a85b7c4a3.png",
     "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
@@ -21,10 +21,10 @@
     "static/media/about.png": "/Gruta342/static/media/about.d68eb96d048d6c14eb9d.png",
     "index.html": "/Gruta342/index.html",
     "main.e68e53c5.css.map": "/Gruta342/static/css/main.e68e53c5.css.map",
-    "main.9b899c68.js.map": "/Gruta342/static/js/main.9b899c68.js.map"
+    "main.1a3781bc.js.map": "/Gruta342/static/js/main.1a3781bc.js.map"
   },
   "entrypoints": [
     "static/css/main.e68e53c5.css",
-    "static/js/main.9b899c68.js"
+    "static/js/main.1a3781bc.js"
   ]
 }
