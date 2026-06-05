@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Gruta342/static/css/main.7d123e20.css",
-    "main.js": "/Gruta342/static/js/main.afa0ce5f.js",
+    "main.css": "/Gruta342/static/css/main.e5e5e3d0.css",
+    "main.js": "/Gruta342/static/js/main.1226f213.js",
     "static/media/scape.jpg": "/Gruta342/static/media/scape.2bc4f9b2a4f809636fa2.jpg",
     "static/media/deception.png": "/Gruta342/static/media/deception.caeb469cdf5a85b7c4a3.png",
     "static/media/escape.png": "/Gruta342/static/media/escape.a23e09b4db26d0afbb46.png",
@@ -20,11 +20,11 @@
     "static/media/logo.png": "/Gruta342/static/media/logo.de6028c275a174721751.png",
     "static/media/about.png": "/Gruta342/static/media/about.d68eb96d048d6c14eb9d.png",
     "index.html": "/Gruta342/index.html",
-    "main.7d123e20.css.map": "/Gruta342/static/css/main.7d123e20.css.map",
-    "main.afa0ce5f.js.map": "/Gruta342/static/js/main.afa0ce5f.js.map"
+    "main.e5e5e3d0.css.map": "/Gruta342/static/css/main.e5e5e3d0.css.map",
+    "main.1226f213.js.map": "/Gruta342/static/js/main.1226f213.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d123e20.css",
-    "static/js/main.afa0ce5f.js"
+    "static/css/main.e5e5e3d0.css",
+    "static/js/main.1226f213.js"
   ]
 }
