@@ -1,0 +1,665 @@
+/* ==========================================================================
+   Gruta 342 - Painel Administrativo CSS
+   Estrutura Linear Vertical Completa (Inclusão -> Gerenciamento)
+   ========================================================================== */
+
+:root {
+  --bg-main: #020914;
+  --bg-card: #06152b;
+  --bg-sidebar: #040d1a;
+  --accent: #00a8ff;
+  --accent-hover: #0086cc;
+  --text-main: #ffffff;
+  --text-muted: #8a9fc4;
+  --border: rgba(0, 168, 255, 0.15);
+  --success: #00e676;
+  --error: #ff3d00;
+  --bg-input: rgba(0, 0, 0, 0.35);
+  --border-edit: #ffaa00;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ==========================================================================
+   BARRA LATERAL DE NAVEGAÇÃO
+   ========================================================================== */
+.admin-sidebar {
+  width: 280px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.5rem;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  margin-bottom: 3rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-brand h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.sidebar-brand span {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 14px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.menu-item:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.menu-item.active {
+  color: var(--text-main);
+  background: rgba(0, 168, 255, 0.12);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ==========================================================================
+   ÁREA CENTRAL E FLUXO VERTICAL
+   ========================================================================== */
+.admin-content-wrapper {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.content-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.admin-sections-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+
+/* ==========================================================================
+   ESTILOS DOS FORMULÁRIOS
+   ========================================================================== */
+.admin-form {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-form:has(.btn-secondary) {
+  border-color: rgba(255, 170, 0, 0.3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="date"],
+.admin-form input[type="time"],
+.admin-form textarea,
+.admin-select {
+  background-color: var(--bg-input);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.admin-select {
+  cursor: pointer;
+  appearance: none;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.input-half {
+  max-width: 50%;
+}
+
+.form-actions-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #01050e;
+  font-weight: 700;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   TABELAS DE GERENCIAMENTO (ALTERAÇÕES)
+   ========================================================================== */
+.records-table-wrapper {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.records-table th {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.records-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  vertical-align: middle;
+}
+
+.records-table tr:last-child td {
+  border-bottom: none;
+}
+
+.records-table tr:hover td {
+  background-color: rgba(0, 168, 255, 0.02);
+}
+
+.row-highlight-editing td {
+  background-color: rgba(255, 170, 0, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 170, 0, 0.2);
+}
+
+/* Classe para escurecer o item oculto */
+.item-hidden td {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.font-semibold {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.table-empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 3rem !important;
+}
+
+/* ==========================================================================
+   AÇÕES NAS TABELAS (NOVOS SVGS E BOTÕES)
+   ========================================================================== */
+.table-actions-flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.table-actions-flex button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.table-actions-flex button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Novo botão de Ocultar/Exibir */
+.action-btn-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.action-btn-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  transform: scale(1.05);
+}
+
+/* Botão de Editar mais vibrante */
+.action-btn-edit {
+  background: rgba(255, 170, 0, 0.15);
+  color: #ffaa00;
+}
+
+.action-btn-edit:hover {
+  background: #ffaa00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Botão de Excluir mais vibrante */
+.action-btn-delete {
+  background: rgba(255, 61, 0, 0.15);
+  color: var(--error);
+}
+
+.action-btn-delete:hover {
+  background: var(--error);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   TAGS E COMPONENTES AUXILIARES
+   ========================================================================== */
+.tag-input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.tag-input-wrapper button {
+  background: rgba(0, 168, 255, 0.08);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.tag-input-wrapper button:hover {
+  background: var(--accent);
+  color: #01050e;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.4rem;
+}
+
+.tag-badge {
+  background-color: rgba(0, 168, 255, 0.12);
+  border: 1px solid rgba(0, 168, 255, 0.25);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-badge button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.tag-badge button:hover {
+  color: var(--error);
+}
+
+.table-tags-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.table-tag-mini {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SISTEMA DE ANEXOS DA GALERIA MÚLTIPLA
+   ========================================================================== */
+.multiple-upload-zone {
+  border: 2px dashed rgba(0, 168, 255, 0.25);
+  border-radius: 8px;
+  padding: 2.2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.18);
+  transition: all 0.2s ease;
+}
+
+.multiple-upload-zone:hover {
+  border-color: var(--accent);
+  background: rgba(0, 168, 255, 0.02);
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.file-upload-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.upload-svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--text-muted);
+}
+
+.multiple-upload-zone:hover .upload-svg {
+  fill: var(--accent);
+}
+
+.gallery-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+  margin-top: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.preview-thumbnail-container {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-remove-thumbnail {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: var(--error);
+  color: #ffffff;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Sistema de Alertas */
+.admin-alert {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.admin-alert.success {
+  background: rgba(0, 230, 118, 0.08);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.admin-alert.error {
+  background: rgba(255, 61, 0, 0.08);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+/* Scrollbar Customizada */
+.admin-content-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.admin-content-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+/* --- ESTILOS PARA BATCH UPLOAD NA GALERIA --- */
+.gallery-batch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.gallery-batch-card {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-remove-batch {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--error);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.btn-remove-batch:hover {
+  transform: scale(1.1);
+}
+
+.batch-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.batch-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.batch-fields input[type="text"],
+.batch-fields input[type="date"],
+.batch-fields select {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.batch-fields input[type="text"]::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.checkbox-label {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffaa00;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.batch-tags button {
+  background: var(--accent);
+  color: var(--bg-main);
+  border: none;
+  border-radius: 6px;
+  padding: 0 12px;
+  cursor: pointer;
+  font-weight: bold;
+}

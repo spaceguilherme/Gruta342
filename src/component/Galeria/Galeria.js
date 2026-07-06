@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import "./Galeria.css";
-import { photosData } from "../../data/photos";
 
 const ChevronDownIcon = () => (
   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +33,6 @@ const parseDate = (dateString) => {
   return new Date(year, month - 1, day);
 };
 
-const sortedPhotosData = [...photosData].sort((a, b) => parseDate(b.date) - parseDate(a.date));
-
 const getAspectWeight = (aspectStr) => {
   if (!aspectStr) return 0.75; 
   const [w, h] = aspectStr.split(':').map(Number);
@@ -47,10 +44,14 @@ const formatAspectRatio = (aspectStr) => {
 };
 
 export default function Galeria() {
+  const [photosData, setPhotosData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeFilters, setActiveFilters] = useState([]);
   const [selectedPhotoId, setSelectedPhotoId] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [columnCount, setColumnCount] = useState(4); 
+
+  const sortedPhotosData = [...photosData].sort((a, b) => parseDate(b.date) - parseDate(a.date));
   
   // NOVO ESTADO: Para guardar o texto digitado na busca
   const [searchTerm, setSearchTerm] = useState(""); 
@@ -60,6 +61,23 @@ export default function Galeria() {
   const isVideo = (url) => {
     return url.toLowerCase().match(/\.(mp4|webm|ogg)$/);
   };
+
+  useEffect(() => {
+    const fetchGallery = async () => {
+      try {
+        const response = await fetch("/api/gallery");
+        if (response.ok) {
+          const data = await response.json();
+          setPhotosData(data.filter(photo => photo.is_visible));
+        }
+      } catch (error) {
+        console.error("Erro ao carregar a galeria:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchGallery();
+  }, []);
 
   useEffect(() => {
     const updateColumns = () => {
@@ -160,6 +178,8 @@ export default function Galeria() {
           Registros de momentos que talvez não devessem ser registrados.
         </p>
       </div>
+      
+      {isLoading && <p style={{ textAlign: "center", color: "#8a9fc4", padding: "40px", fontStyle: "italic" }}>Revelando as fotos na câmara escura...</p>}
 
       <div className="galeria-filters-modern">
         <div className="custom-dropdown" ref={dropdownRef}>

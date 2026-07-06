@@ -41,7 +41,6 @@ model User {
   emailVerified DateTime?
   image         String?
   password      String?
-  
   // Nossas informações customizadas da Gruta!
   roles         String[]  @default(["guest"])
   joined_date   DateTime  @default(now())
@@ -56,4 +55,44 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @db.Text
+  date        String   
+  time        String   
+  category    String   
+  bannerUrl   String?  
+  tags        String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  is_visible  Boolean  @default(true)
+}
+
+model Game {
+  id         String   @id @default(uuid())
+  title      String
+  category   String   // Ex: "Próprios", "Tabuleiros", "Online"npx prisma db push
+  image      String   // URL da imagem no Supabase ou caminho local
+  badge      String?  // Opcional, para tags como "MOBILE"
+  is_visible Boolean  @default(true) //
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Gallery {
+  id           String   @id @default(uuid())
+  img          String   // URL da imagem no Supabase ou caminho local
+  caption      String?  // Legenda da foto
+  date         String   // Mantido como String para aceitar o formato "dd/mm/aaaa" do seu arquivo
+  tags         String[] // Array de strings suportado nativamente pelo PostgreSQL
+  isHallOfFame Boolean  @default(false)
+  aspect       String   @default("4:3") // Guarda a proporção da imagem (ex: "4:3", "16:9", "3:4")
+  is_visible   Boolean  @default(true)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }

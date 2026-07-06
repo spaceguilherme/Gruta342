@@ -1,7 +1,18 @@
+"use client";
+
 import React from "react";
+import { usePathname } from "next/navigation";
 import "./FloatingSocials.css";
 
 export default function FloatingSocials() {
+  const pathname = usePathname();
+  const isPainelAdmin = pathname?.startsWith("/admin");
+
+  // Se estivermos em qualquer página dentro de /admin, não renderiza os botões
+  if (isPainelAdmin) {
+    return null;
+  }
+
   return (
     <div className="floating-socials">
       

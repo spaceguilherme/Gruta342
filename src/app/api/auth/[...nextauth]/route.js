@@ -11,7 +11,27 @@ export const authOptions = {
   // OBRIGATÓRIO: Quando usamos Credentials com Prisma, a sessão deve ser via Token (JWT)
   session: {
     strategy: "jwt",
-  },pages: {
+  },
+  callbacks: {
+    async jwt({ token, user }) {
+      // O 'user' só vem no momento exato em que o cara faz o login
+      if (user) {
+        token.roles = user.roles;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      // Repassa os cargos do token invisível para a sessão do frontend
+      if (session.user) {
+        session.user.roles = token.roles;
+      }
+      return session;
+    }
+  },
+  pages: {
+    signIn: "/login", 
+  },
+  pages: {
     signIn: "/login", 
   },
   providers: [
